@@ -1,0 +1,354 @@
+{
+  "stall:western": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Food_court_edo_japan_la_belle_province_basha.jpg/500px-Food_court_edo_japan_la_belle_province_basha.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "stall:korean": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Korea-Pojangmacha-01.jpg/500px-Korea-Pojangmacha-01.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "stall:chinese": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Lau_Pa_Sat_Singapore_1.jpg/500px-Lau_Pa_Sat_Singapore_1.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "stall:japanese": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Izakaya_Exterior_Gotanda.jpg/500px-Izakaya_Exterior_Gotanda.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "stall:shawarma": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/D%C3%B6ner_kebab_slicing.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "stall:mamak": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Restaurant_Ahmediah_-_panoramio.jpg/500px-Restaurant_Ahmediah_-_panoramio.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "stall:kopitiam": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/CoffeeShopSG.JPG/500px-CoffeeShopSG.JPG",
+    "credit": "Wikimedia Commons"
+  },
+  "stall:indian": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Banana-leaf-1.JPG/500px-Banana-leaf-1.JPG",
+    "credit": "Wikimedia Commons"
+  },
+  "wes-01": {
+    "url": "https://www.themealdb.com/images/media/meals/sutysw1468247559.jpg",
+    "credit": "TheMealDB"
+  },
+  "wes-02": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Espaguetis_carbonara.jpg/500px-Espaguetis_carbonara.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "wes-03": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Chicken_Chops_and_Chips_Red_Tea_House.jpg/500px-Chicken_Chops_and_Chips_Red_Tea_House.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "wes-04": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Fish_and_chips_blackpool.jpg/500px-Fish_and_chips_blackpool.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "wes-06": {
+    "url": "https://www.themealdb.com/images/media/meals/lgmnff1763789847.jpg",
+    "credit": "TheMealDB"
+  },
+  "wes-07": {
+    "url": "https://www.themealdb.com/images/media/meals/syqypv1486981727.jpg",
+    "credit": "TheMealDB"
+  },
+  "wes-08": {
+    "url": "https://www.themealdb.com/images/media/meals/wtsvxx1511296896.jpg",
+    "credit": "TheMealDB"
+  },
+  "kor-07": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/CornDog.jpg/500px-CornDog.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "chi-01": {
+    "url": "https://www.themealdb.com/images/media/meals/1529442316.jpg",
+    "credit": "TheMealDB"
+  },
+  "chi-02": {
+    "url": "https://www.themealdb.com/images/media/meals/1525872624.jpg",
+    "credit": "TheMealDB"
+  },
+  "chi-03": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Koh_Mak%2C_Thailand%2C_Fried_rice_with_seafood%2C_Thai_fried_rice.jpg/500px-Koh_Mak%2C_Thailand%2C_Fried_rice_with_seafood%2C_Thai_fried_rice.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "chi-04": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Charsiu.jpg/500px-Charsiu.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "chi-06": {
+    "url": "https://www.themealdb.com/images/media/meals/1525876468.jpg",
+    "credit": "TheMealDB"
+  },
+  "chi-08": {
+    "url": "https://www.themealdb.com/images/media/meals/1529444113.jpg",
+    "credit": "TheMealDB"
+  },
+  "jap-01": {
+    "url": "https://www.themealdb.com/images/media/meals/vwrpps1503068729.jpg",
+    "credit": "TheMealDB"
+  },
+  "jap-02": {
+    "url": "https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg",
+    "credit": "TheMealDB"
+  },
+  "jap-04": {
+    "url": "https://www.themealdb.com/images/media/meals/g046bb1663960946.jpg",
+    "credit": "TheMealDB"
+  },
+  "jap-05": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Shoyu_Ramen%EF%BC%88Tokyo_Ramen%EF%BC%89_-_01.jpg/500px-Shoyu_Ramen%EF%BC%88Tokyo_Ramen%EF%BC%89_-_01.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "sha-04": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/D%C3%B6ner_kebab_slicing.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "sha-08": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Sabich1.png/500px-Sabich1.png",
+    "credit": "Wikimedia Commons"
+  },
+  "sha-10": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/French_Fries.JPG/500px-French_Fries.JPG",
+    "credit": "Wikimedia Commons"
+  },
+  "mam-01": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/YosriRotiCanai.jpg/500px-YosriRotiCanai.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "mam-04": {
+    "url": "https://www.themealdb.com/images/media/meals/wai9bw1619788844.jpg",
+    "credit": "TheMealDB"
+  },
+  "kop-02": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Soft-boiled-egg.jpg/500px-Soft-boiled-egg.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "kop-03": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Hainanese_Chicken_Rice.jpg/500px-Hainanese_Chicken_Rice.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "kop-04": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Malaysian_noodles-Curry_Mee-01.jpg/500px-Malaysian_noodles-Curry_Mee-01.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "kop-05": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Char_kway_teow.jpg/500px-Char_kway_teow.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "kop-06": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Newton_HokkienMee.JPG/500px-Newton_HokkienMee.JPG",
+    "credit": "Wikimedia Commons"
+  },
+  "kop-07": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/A_Steam_White_Rice_Noodle_Rolls_from_KC_Chinese_Restaurant.jpg/500px-A_Steam_White_Rice_Noodle_Rolls_from_KC_Chinese_Restaurant.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "kop-08": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/FrenchToast.JPG/500px-FrenchToast.JPG",
+    "credit": "Wikimedia Commons"
+  },
+  "kop-09": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Mee_siam.jpg/500px-Mee_siam.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "ind-01": {
+    "url": "https://www.themealdb.com/images/media/meals/xrttsx1487339558.jpg",
+    "credit": "TheMealDB"
+  },
+  "ind-02": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Banana-leaf-1.JPG/500px-Banana-leaf-1.JPG",
+    "credit": "Wikimedia Commons"
+  },
+  "ind-05": {
+    "url": "https://www.themealdb.com/images/media/meals/qptpvt1487339892.jpg",
+    "credit": "TheMealDB"
+  },
+  "ind-08": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Butter_Chicken_%26_Butter_Naan_-_Home_-_Chandigarh_-_India_-_0006.jpg/500px-Butter_Chicken_%26_Butter_Naan_-_Home_-_Chandigarh_-_India_-_0006.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "ind-09": {
+    "url": "https://www.themealdb.com/images/media/meals/vvstvq1487342592.jpg",
+    "credit": "TheMealDB"
+  },
+  "ind-10": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Afghan_Palo.jpg/500px-Afghan_Palo.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "wes-05": {
+    "url": "https://www.themealdb.com/images/media/meals/wruvqv1511880994.jpg",
+    "credit": "TheMealDB"
+  },
+  "wes-09": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Smoked_chicken_and_avocado_wrap.jpg/500px-Smoked_chicken_and_avocado_wrap.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "wes-10": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Original_Mac_n_Cheese_.jpg/500px-Original_Mac_n_Cheese_.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "kor-01": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Iksan_City_48_Korean_Style_Fried_chicken.jpg/500px-Iksan_City_48_Korean_Style_Fried_chicken.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "kor-02": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Dolsot-bibimbap.jpg/500px-Dolsot-bibimbap.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "kor-03": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Kimchi_fried_rice.jpg/500px-Kimchi_fried_rice.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "kor-04": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Tteokbokki.JPG/500px-Tteokbokki.JPG",
+    "credit": "Wikimedia Commons"
+  },
+  "kor-05": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Bulgogi_2.jpg/500px-Bulgogi_2.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "kor-06": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/2016_Indomie_Mi_Goreng_Rendang_NL_01.jpg/500px-2016_Indomie_Mi_Goreng_Rendang_NL_01.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "kor-09": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Polish_Korean_Cuisine_and_Culture_Exchanges_Gradmother%E2%80%99s_Recipes_05.jpg/500px-Polish_Korean_Cuisine_and_Culture_Exchanges_Gradmother%E2%80%99s_Recipes_05.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "kor-10": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Yangnyeom-chikin_bhcChicken_1.jpg/500px-Yangnyeom-chikin_bhcChicken_1.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "chi-05": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/HK_SW_%E4%B8%8A%E7%92%B0_Sheung_Wan_%E7%9A%87%E5%90%8E%E5%A4%A7%E9%81%93%E4%B8%AD_303_Queen%27s_Road_Central_%E6%AC%8A%E8%A8%98%E9%9B%B2%E5%90%9E%E9%BA%B5_Wonton_noodle_soup_shop_June_2020_SS2_10.jpg/500px-HK_SW_%E4%B8%8A%E7%92%B0_Sheung_Wan_%E7%9A%87%E5%90%8E%E5%A4%A7%E9%81%93%E4%B8%AD_303_Queen%27s_Road_Central_%E6%AC%8A%E8%A8%98%E9%9B%B2%E5%90%9E%E9%BA%B5_Wonton_noodle_soup_shop_June_2020_SS2_10.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "chi-07": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Koh_Mak%2C_Thailand%2C_Fried_rice_with_seafood%2C_Thai_fried_rice.jpg/500px-Koh_Mak%2C_Thailand%2C_Fried_rice_with_seafood%2C_Thai_fried_rice.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "chi-09": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/%E7%95%AA%E8%8C%84%E7%82%92%E8%9B%8B2.PNG/500px-%E7%95%AA%E8%8C%84%E7%82%92%E8%9B%8B2.PNG",
+    "credit": "Wikimedia Commons"
+  },
+  "chi-10": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Claypot_Chicken_Rice%2C_Singapore.JPG/500px-Claypot_Chicken_Rice%2C_Singapore.JPG",
+    "credit": "Wikimedia Commons"
+  },
+  "jap-03": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Beef_curry_rice_003.jpg/500px-Beef_curry_rice_003.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "jap-06": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/%E9%B6%8F%E5%A4%A9%E3%81%AE%E3%81%86%E3%81%A9%E3%82%93.jpg/500px-%E9%B6%8F%E5%A4%A9%E3%81%AE%E3%81%86%E3%81%A9%E3%82%93.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "jap-07": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/%E9%B3%A5%E7%84%BC%E3%81%8D%E5%B1%85%E9%85%92%E5%B1%8B_%2839394233682%29.jpg/500px-%E9%B3%A5%E7%84%BC%E3%81%8D%E5%B1%85%E9%85%92%E5%B1%8B_%2839394233682%29.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "jap-08": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/%E5%8F%B0%E7%81%A3%E5%8D%97%E6%8A%95%E8%8D%89%E5%B1%AF%E6%B0%B4%E9%A4%83Nantou%2C_Taiwan_Caotun_dumplings.jpg/500px-%E5%8F%B0%E7%81%A3%E5%8D%97%E6%8A%95%E8%8D%89%E5%B1%AF%E6%B0%B4%E9%A4%83Nantou%2C_Taiwan_Caotun_dumplings.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "jap-09": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Yakisoba_-_01.jpg/500px-Yakisoba_-_01.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "jap-10": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Unagi1.jpg/500px-Unagi1.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "sha-01": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Shawarma_2.jpg/500px-Shawarma_2.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "sha-02": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Rolled_kebab.jpg/500px-Rolled_kebab.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "sha-06": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Pita_giros.JPG/500px-Pita_giros.JPG",
+    "credit": "Wikimedia Commons"
+  },
+  "sha-07": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Falafels_2.jpg/500px-Falafels_2.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "sha-09": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Lebanese_style_hummus.jpg/500px-Lebanese_style_hummus.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "mam-02": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Murtabak.jpg/500px-Murtabak.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "mam-05": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Kampung_Bukit_Jagong%2C_Pendang_20240917_172701.jpg/500px-Kampung_Bukit_Jagong%2C_Pendang_20240917_172701.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "mam-06": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/RotiTissue001.jpg/500px-RotiTissue001.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "mam-07": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/A_plate_of_Nasi_Kandar.jpg/500px-A_plate_of_Nasi_Kandar.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "mam-08": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/YosriRotiCanai.jpg/500px-YosriRotiCanai.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "mam-10": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Nasi_goreng_pattaya_20231028_120535.jpg/500px-Nasi_goreng_pattaya_20231028_120535.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "kop-01": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Kaya_toast_on_a_plate.jpg/500px-Kaya_toast_on_a_plate.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "ind-03": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Chicken_tikka_masala_%28cropped%29.jpg/500px-Chicken_tikka_masala_%28cropped%29.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "ind-04": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Masala_Dosa_2023.jpg/500px-Masala_Dosa_2023.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "ind-07": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Chana_masala.jpg/500px-Chana_masala.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "kor-08": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Korean_cuisine-Dakgalbi-01.jpg/500px-Korean_cuisine-Dakgalbi-01.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "sha-03": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Jiroufan.jpg/500px-Jiroufan.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "sha-05": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Empanada_flor_de_Calabaza.jpg/500px-Empanada_flor_de_Calabaza.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "mam-03": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Indomie_Logo.png/500px-Indomie_Logo.png",
+    "credit": "Wikimedia Commons"
+  },
+  "mam-09": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Mie_Aceh_with_beef.jpg/500px-Mie_Aceh_with_beef.jpg",
+    "credit": "Wikimedia Commons"
+  },
+  "kop-10": {
+    "url": "https://www.themealdb.com/images/media/meals/wyxwsp1486979827.jpg",
+    "credit": "TheMealDB"
+  },
+  "ind-06": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Palakpaneer_Rayagada_Odisha_0009.jpg/500px-Palakpaneer_Rayagada_Odisha_0009.jpg",
+    "credit": "Wikimedia Commons"
+  }
+}

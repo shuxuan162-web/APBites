@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --safe-bottom: env(safe-area-inset-bottom, 0px);
+    --safe-top: env(safe-area-inset-top, 0px);
+    color-scheme: light;
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-white font-body text-[14px] leading-[1.6] text-ink antialiased;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+  h1, h2, h3, h4, button {
+    font-family: Poppins, Inter, Arial, sans-serif;
+  }
+  :focus-visible {
+    outline: 2.5px solid #202124;
+    outline-offset: 2px;
+    border-radius: 8px;
+  }
+  input, textarea, select {
+    @apply font-body;
+  }
+}
+
+@layer components {
+  .page-x { @apply px-5 sm:px-8 lg:px-12; }
+  .container-app { @apply mx-auto w-full max-w-[1200px]; }
+  .h-page { @apply font-display text-[26px] font-bold leading-[1.25] tracking-[-0.01em]; }
+  .h-section { @apply font-display text-[21px] font-bold leading-[1.3]; }
+  .h-card { @apply font-display text-[17px] font-semibold leading-[1.35]; }
+  .t-food { @apply font-display text-[16px] font-semibold leading-[1.4]; }
+  .t-price { @apply whitespace-nowrap font-display text-[17px] font-bold leading-[1.3] tabular-nums; }
+  .t-desc { @apply text-[13px] leading-[1.5] text-ink-muted; }
+  .t-label { @apply text-[12px] font-medium leading-[1.4]; }
+  .card { @apply rounded-card bg-white shadow-card; }
+  .press { @apply transition-transform duration-150 active:scale-[0.98]; }
+  .lift { @apply transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lift; }
+  .field {
+    @apply h-[54px] w-full rounded-[12px] border border-transparent bg-surface-alt px-4 text-[14px] text-ink placeholder:text-ink-faint
+      transition focus:border-ink/70 focus:bg-white focus:outline-none;
+  }
+  .field-label { @apply mb-1.5 block text-[13px] font-medium text-ink; }
+  .scroll-x { @apply flex snap-x gap-3.5 overflow-x-auto pb-2; scrollbar-width: none; }
+  .scroll-x::-webkit-scrollbar { display: none; }
+  .link-accent { @apply font-semibold text-ink underline decoration-brand decoration-2 underline-offset-4 hover:decoration-ink; }
+  .pb-nav { padding-bottom: calc(96px + var(--safe-bottom)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.img-sold { filter: saturate(0.35) brightness(1.02); }
+
+/* Grid children may shrink below their content (lets truncate/line-clamp work, prevents mobile overflow). */
+.grid > * { min-width: 0; }
