@@ -3,7 +3,7 @@
 // role checks, stall ownership, server-side price recalculation, valid status transitions,
 // optimistic-concurrency versioning and duplicate-submission protection.
 // Swap these bodies for Supabase calls later without touching the UI.
-import type { CategoryId } from '../data/menu';
+import { normaliseItemName, type CategoryId, type ItemKind } from '../data/menu';
 import { useDb, mutate, makeOrderItems, orderNumber, pickupCode, buildSimOrder, resetDemo, type DbState } from '../store/db';
 import type {
   AppNotification, Cart, MenuItem, NotificationType, Order, OrderStatus, PaymentMethod, Result, Stall, User,
@@ -392,22 +392,35 @@ export async function upsertItem(vendorId: string, input: Omit<MenuItem, 'create
   if (offline()) return fail("You're offline. The menu wasn't changed.");
   const r = vendorStall(vendorId);
   if (!r.ok) return r;
-  if (!input.name.trim()) return fail('Food name is required.');
+  if (!input.name.trim()) return fail(input.kind === 'drink' ? 'Drink name is required.' : 'Food name is required.', 'NAME');
   if (!(input.price >= 0)) return fail('Price must be zero or more.');
   if (!(input.prep > 0)) return fail('Preparation time must be greater than zero.');
   const now = Date.now();
   const existing = input.id ? S().items[input.id] : undefined;
   if (existing && existing.stallId !== r.data) return fail("You can only edit your own stall's menu.", 'AUTH');
+  if (input.kind === 'drink') {
+    const clash = drinkNameClash(input.name, r.data);
+    if (clash) return fail(`"${clash.name}" is already sold at ${S().stalls[clash.stallId].name}. Each drink must be unique to one stall — try a different name.`, 'DUPLICATE_DRINK');
+  }
   const item: MenuItem = {
     ...(existing ?? { createdAt: now }),
     id: existing?.id ?? uid(`${r.data.slice(0, 3)}-`),
-    stallId: r.data, name: input.name.trim(), description: input.description.trim(), price: round2(input.price),
+    stallId: r.data, kind: input.kind, name: input.name.trim(), description: input.description.trim(), price: round2(input.price),
     imageUrl: input.imageUrl || existing?.imageUrl, ingredients: input.ingredients?.length ? input.ingredients : undefined,
     prep: Math.round(input.prep), isAvailable: input.isAvailable, updatedAt: now,
   } as MenuItem;
   mutate((s) => ({ items: { ...s.items, [item.id]: item } }));
   return ok(item);
 }
+
+/** A drink at ANOTHER stall whose normalised name matches `name` (drinks must be unique per stall). */
+export function drinkNameClash(name: string, ownStallId: CategoryId): MenuItem | undefined {
+  const key = normaliseItemName(name);
+  if (!key) return undefined;
+  return Object.values(S().items).find((i) => i.kind === 'drink' && i.stallId !== ownStallId && normaliseItemName(i.name) === key);
+}
+
+export type { ItemKind };
 
 export async function setAvailability(vendorId: string, itemId: string, isAvailable: boolean): Promise<Result<void>> {
   const r = vendorStall(vendorId);

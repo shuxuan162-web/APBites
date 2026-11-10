@@ -24,6 +24,7 @@ import LiveStatus from './pages/student/LiveStatus';
 import Orders from './pages/student/Orders';
 import OrderDetails from './pages/student/OrderDetails';
 import Favourites from './pages/student/Favourites';
+import Drinks from './pages/student/Drinks';
 import Notifications from './pages/student/Notifications';
 import Profile from './pages/student/Profile';
 import EditProfile from './pages/student/EditProfile';
@@ -87,6 +88,7 @@ export default function App() {
           <Route path="/track/:id" element={<TrackOrder />} />
           <Route path="/orders/:id" element={<OrderDetails />} />
           <Route path="/favourites" element={<Favourites />} />
+          <Route path="/drinks" element={<Drinks />} />
           <Route path="/notifications" element={<Notifications />} />
           <Route path="/profile/edit" element={<EditProfile />} />
           <Route path="/help" element={<Help />} />

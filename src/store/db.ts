@@ -13,7 +13,7 @@ import { orderPrepMinutes } from '../lib/waitTime';
 import { round2, uid } from '../lib/format';
 
 export const DB_KEY = 'apbites-db-v1';
-export const DB_VERSION = 4;
+export const DB_VERSION = 5;
 
 const IMG = images as Record<string, { url: string; credit: string }>;
 export const imageFor = (id: string) => IMG[id]?.url;
@@ -90,7 +90,7 @@ export function buildSimOrder(
   createdAt: number,
   rand: () => number = Math.random,
 ): Order {
-  const menu = Object.values(st.items).filter((i) => i.stallId === stallId && i.isAvailable);
+  const menu = Object.values(st.items).filter((i) => i.stallId === stallId && i.isAvailable && i.kind === 'food');
   const n = 1 + Math.floor(rand() * 2);
   const chosen = Array.from({ length: n }, () => ({ item: pick(menu, rand()), quantity: rand() < 0.8 ? 1 : 2 }));
   const items = makeOrderItems(chosen);
@@ -151,7 +151,7 @@ export function createSeed(): DbState {
     SEED_ITEMS.map((i) => [
       i.id,
       {
-        id: i.id, stallId: i.stallId, name: i.name, description: i.description, price: i.price,
+        id: i.id, stallId: i.stallId, kind: i.kind, name: i.name, description: i.description, price: i.price,
         imageUrl: imageFor(i.id), ingredients: i.ingredients, prep: i.prep,
         isAvailable: !['kor-07', 'mam-06', 'jap-10'].includes(i.id), // a few sold-out examples
         createdAt: now, updatedAt: now,

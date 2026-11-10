@@ -1,4 +1,4 @@
-import type { CategoryId } from '../data/menu';
+import type { CategoryId, ItemKind } from '../data/menu';
 
 export type Role = 'student' | 'vendor' | 'admin';
 
@@ -41,6 +41,7 @@ export interface Stall {
 export interface MenuItem {
   id: string;
   stallId: CategoryId;
+  kind: ItemKind;
   name: string;
   description: string;
   price: number;

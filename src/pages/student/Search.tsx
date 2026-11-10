@@ -42,6 +42,7 @@ export default function Search() {
   const [q, setQ] = useState('');
   const [cuisines, setCuisines] = useState<CategoryId[]>([]);
   const [maxPrice, setMaxPrice] = useState<number>(Number(params.get('max')) || maxMenuPrice);
+  const [type, setType] = useState<'all' | 'food' | 'drink'>(params.get('type') === 'drink' ? 'drink' : 'all');
   const [availableOnly, setAvailableOnly] = useState(!!params.get('time') || !!params.get('max'));
   const [levels, setLevels] = useState<WorkloadLevel[]>([]);
   const [maxWait, setMaxWait] = useState<number | null>(Number(params.get('time')) || null);
@@ -78,6 +79,7 @@ export default function Search() {
       })
       .filter((x): x is NonNullable<typeof x> => !!x)
       .filter(({ i, wait }) => {
+        if (type !== 'all' && i.kind !== type) return false;
         if (cuisines.length && !cuisines.includes(i.stallId)) return false;
         if (i.price > maxPrice) return false;
         if (availableOnly && (!i.isAvailable || !live[i.stallId].stall.isOpen)) return false;
@@ -94,11 +96,11 @@ export default function Search() {
     };
     return list.sort(by[sort]);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [items, live, term, cuisines, maxPrice, availableOnly, levels, maxWait, sort]);
+  }, [items, live, term, type, cuisines, maxPrice, availableOnly, levels, maxWait, sort]);
 
-  const filterCount = cuisines.length + levels.length + (maxPrice < maxMenuPrice ? 1 : 0) + (availableOnly ? 1 : 0) + (maxWait ? 1 : 0);
+  const filterCount = (type !== 'all' ? 1 : 0) + cuisines.length + levels.length + (maxPrice < maxMenuPrice ? 1 : 0) + (availableOnly ? 1 : 0) + (maxWait ? 1 : 0);
   const clear = () => {
-    setCuisines([]); setLevels([]); setMaxPrice(maxMenuPrice); setAvailableOnly(false); setMaxWait(null); setSort('relevance'); setQ('');
+    setType('all'); setCuisines([]); setLevels([]); setMaxPrice(maxMenuPrice); setAvailableOnly(false); setMaxWait(null); setSort('relevance'); setQ('');
   };
   const toggle = <T,>(arr: T[], v: T, set: (a: T[]) => void) => set(arr.includes(v) ? arr.filter((x) => x !== v) : [...arr, v]);
   const showBrowse = !term && !filterCount;
@@ -156,7 +158,11 @@ export default function Search() {
           <h2 className="font-display text-[21px] font-bold">Filters</h2>
           <button aria-label="Close filters" onClick={() => setSheet(false)} className="flex h-11 w-11 items-center justify-center rounded-full hover:bg-surface-alt"><X className="h-5 w-5" /></button>
         </div>
-        <h3 className="mt-4 font-display text-[15px] font-semibold">Cuisine</h3>
+        <h3 className="mt-4 font-display text-[15px] font-semibold">Type</h3>
+        <div className="mt-2 flex flex-wrap gap-2" role="group" aria-label="Item type">
+          {(['all', 'food', 'drink'] as const).map((k) => <Chip key={k} selected={type === k} onClick={() => setType(k)}>{k === 'all' ? 'All' : k === 'food' ? 'Food' : 'Drinks'}</Chip>)}
+        </div>
+        <h3 className="mt-5 font-display text-[15px] font-semibold">Cuisine</h3>
         <div className="mt-2 flex flex-wrap gap-2">
           {CATEGORY_ORDER.map((id) => <Chip key={id} selected={cuisines.includes(id)} onClick={() => toggle(cuisines, id, setCuisines)}>{live[id].stall.name.replace(' Food', '')}</Chip>)}
         </div>

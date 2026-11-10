@@ -24,15 +24,39 @@ export interface SeedStall {
   q: string[];
 }
 
+export type ItemKind = 'food' | 'drink';
+
 export interface SeedItem {
   id: string;
   stallId: CategoryId;
+  kind: ItemKind;
   name: string;
   description: string;
   price: number;
   prep: number; // estimated preparation minutes
   ingredients?: string[]; // only where supplied by the brief
   q: string[];
+}
+
+/**
+ * Normalise a drink name for uniqueness checks: lowercase, accents stripped, and all punctuation
+ * and whitespace removed, so "Teh Tarik", "teh-tarik!" and "TehTarik" collide.
+ */
+export const normaliseItemName = (name: string) =>
+  name.toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '').replace(/[^\p{L}\p{N}]/gu, '');
+
+/** Throws if any drink name (normalised) is listed under more than one stall. */
+export function assertUniqueDrinks(items: Pick<SeedItem, 'name' | 'stallId' | 'kind'>[]) {
+  const seen = new Map<string, string>();
+  for (const it of items) {
+    if (it.kind !== 'drink') continue;
+    const key = normaliseItemName(it.name);
+    const owner = seen.get(key);
+    if (owner && owner !== it.stallId) {
+      throw new Error(`Duplicate drink "${it.name}" found at both ${owner} and ${it.stallId}. Each drink must be unique to one stall.`);
+    }
+    seen.set(key, it.stallId);
+  }
 }
 
 export const CATEGORY_ORDER: CategoryId[] = [
@@ -100,7 +124,7 @@ export const SEED_STALLS: SeedStall[] = [
 
 const W = 'western', K = 'korean', C = 'chinese', J = 'japanese', S = 'shawarma', M = 'mamak', T = 'kopitiam', I = 'indian';
 
-export const SEED_ITEMS: SeedItem[] = [
+const SEED_FOOD: Omit<SeedItem, 'kind'>[] = [
   // ── Western ────────────────────────────────────────────────
   { id: 'wes-01', stallId: W, name: 'Spaghetti Bolognese', price: 12.90, prep: 8, description: 'Classic spaghetti served with rich tomato and minced meat sauce.', q: ['mdb:Spaghetti Bolognese', 'wiki:Bolognese sauce'] },
   { id: 'wes-02', stallId: W, name: 'Carbonara Spaghetti', price: 13.90, prep: 8, description: 'Creamy pasta with smoky chicken and a cheesy sauce.', q: ['wiki:Carbonara', 'mdb:Spaghetti alla Carbonara'] },
@@ -197,3 +221,38 @@ export const SEED_ITEMS: SeedItem[] = [
   { id: 'ind-09', stallId: I, name: 'Mutton Curry Rice', price: 15.90, prep: 5, description: 'Steamed rice served with tender mutton cooked in aromatic curry.', q: ['wiki:Mutton curry', 'mdb:Lamb Rogan josh', 'wiki:Rogan josh'] },
   { id: 'ind-10', stallId: I, name: 'Vegetable Pulao', price: 9.90, prep: 6, description: 'Fragrant basmati rice cooked with mixed vegetables and spices.', q: ['wiki:Pilaf', 'wiki:Pulao'] },
 ];
+
+// ── Drinks (3 per stall, unique across stalls) ───────────────
+// Not part of the original brief: prices are SAMPLE prices that vendors can edit.
+const SEED_DRINK_LIST: Omit<SeedItem, 'kind'>[] = [
+  { id: 'wes-d01', stallId: W, name: 'Classic Vanilla Milkshake', price: 8.90, prep: 3, description: 'Thick, creamy vanilla shake.', q: ['wiki:Milkshake'] },
+  { id: 'wes-d02', stallId: W, name: 'Sparkling Lemonade', price: 5.90, prep: 2, description: 'Fizzy, freshly squeezed lemon cooler.', q: ['wiki:Lemonade', 'wiki:Lemon soda'] },
+  { id: 'wes-d03', stallId: W, name: 'Iced Americano', price: 6.50, prep: 2, description: 'Double-shot espresso over ice.', q: ['wiki:Caffè Americano', 'wiki:Iced coffee'] },
+  { id: 'kor-d01', stallId: K, name: 'Banana Milk', price: 5.50, prep: 1, description: 'Sweet, chilled Korean-style banana milk.', q: ['wiki:Banana Flavored Milk', 'wiki:Banana milk', 'wiki:Flavored milk'] },
+  { id: 'kor-d02', stallId: K, name: 'Yuja Honey Iced Tea', price: 6.90, prep: 2, description: 'Citrusy yuzu marmalade tea over ice.', q: ['wiki:Yuja-cha', 'wiki:Yuja tea'] },
+  { id: 'kor-d03', stallId: K, name: 'Misutgaru Latte', price: 7.50, prep: 2, description: 'Roasted multigrain milk drink.', q: ['wiki:Misu-garu', 'wiki:Misugaru'] },
+  { id: 'chi-d01', stallId: C, name: 'Chrysanthemum Tea', price: 3.90, prep: 1, description: 'Light, floral and cooling.', q: ['wiki:Chrysanthemum tea'] },
+  { id: 'chi-d02', stallId: C, name: 'Winter Melon Tea', price: 3.90, prep: 1, description: 'Caramel-sweet traditional melon tea.', q: ['wiki:Winter melon punch', 'wiki:Winter melon tea'] },
+  { id: 'chi-d03', stallId: C, name: 'Soya Bean Milk', price: 3.50, prep: 1, description: 'Smooth, lightly sweetened soy milk.', q: ['wiki:Soy milk'] },
+  { id: 'jap-d01', stallId: J, name: 'Iced Matcha Latte', price: 8.50, prep: 3, description: 'Stone-ground green tea with milk.', q: ['wiki:Matcha latte', 'wiki:Green tea latte', 'wiki:Matcha'] },
+  { id: 'jap-d02', stallId: J, name: 'Hojicha Milk Tea', price: 7.90, prep: 3, description: 'Toasty roasted green tea latte.', q: ['wiki:Hōjicha', 'wiki:Hojicha'] },
+  { id: 'jap-d03', stallId: J, name: 'Iced Genmaicha', price: 4.90, prep: 1, description: 'Green tea with roasted brown rice.', q: ['wiki:Genmaicha', 'wiki:Brown rice tea'] },
+  { id: 'sha-d01', stallId: S, name: 'Mint Lemonade', price: 6.50, prep: 2, description: 'Blended lemon and fresh mint.', q: ['wiki:Limonana'] },
+  { id: 'sha-d02', stallId: S, name: 'Ayran', price: 4.90, prep: 1, description: 'Chilled, lightly salted yogurt drink.', q: ['wiki:Ayran', 'wiki:Doogh'] },
+  { id: 'sha-d03', stallId: S, name: 'Hibiscus Iced Tea', price: 5.50, prep: 1, description: 'Tart, ruby-red karkade tea.', q: ['wiki:Hibiscus tea'] },
+  { id: 'mam-d01', stallId: M, name: 'Teh Tarik', price: 3.20, prep: 2, description: 'Frothy pulled milk tea.', q: ['wiki:Teh tarik'] },
+  { id: 'mam-d02', stallId: M, name: 'Milo Dinosaur', price: 5.50, prep: 2, description: 'Iced chocolate malt topped with extra powder.', q: ['wiki:Milo dinosaur', 'wiki:Milo (drink)'] },
+  { id: 'mam-d03', stallId: M, name: 'Limau Ais', price: 3.00, prep: 1, description: 'Iced calamansi lime.', q: ['wiki:Limeade', 'wiki:Lime juice'] },
+  { id: 'kop-d01', stallId: T, name: 'Kopi O Ais', price: 3.20, prep: 1, description: 'Strong black kopi over ice.', q: ['wiki:Kopi', 'wiki:Kopi tubruk'] },
+  { id: 'kop-d02', stallId: T, name: 'Teh C Special', price: 4.50, prep: 2, description: 'Three-layer tea with palm sugar and evaporated milk.', q: ['wiki:Teh C', 'wiki:Three layer tea', 'wiki:Hong Kong-style milk tea'] },
+  { id: 'kop-d03', stallId: T, name: 'Cham Ais', price: 3.50, prep: 1, description: 'Iced coffee and tea mix.', q: ['wiki:Yuanyang (drink)', 'wiki:Yuenyeung', 'wiki:Kopi cham'] },
+  { id: 'ind-d01', stallId: I, name: 'Mango Lassi', price: 6.50, prep: 2, description: 'Blended mango and yogurt.', q: ['wiki:Lassi'] },
+  { id: 'ind-d02', stallId: I, name: 'Masala Chai', price: 3.50, prep: 3, description: 'Spiced milk tea.', q: ['wiki:Masala chai'] },
+  { id: 'ind-d03', stallId: I, name: 'Rose Milk', price: 4.50, prep: 1, description: 'Chilled milk with rose syrup.', q: ['wiki:Rose milk'] },
+];
+
+export const SEED_DRINKS: SeedItem[] = SEED_DRINK_LIST.map((d) => ({ ...d, kind: 'drink' }));
+
+export const SEED_ITEMS: SeedItem[] = [...SEED_FOOD.map((f) => ({ ...f, kind: 'food' as const })), ...SEED_DRINKS];
+
+assertUniqueDrinks(SEED_ITEMS);

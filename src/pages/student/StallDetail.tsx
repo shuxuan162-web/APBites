@@ -22,11 +22,14 @@ export default function StallDetail() {
     return <EmptyState art={<StoreIcon className="h-14 w-14" />} title="Stall not found" description="This stall doesn't exist or was removed." action={<Button full onClick={() => nav('/explore')}>Explore Food</Button>} />;
   }
   const { stall, load, wait } = l;
-  const menu = Object.values(items).filter((i) => i.stallId === stall.id).sort((a, b) => Number(b.isAvailable) - Number(a.isAvailable));
+  const byAvail = (a: { isAvailable: boolean }, b: { isAvailable: boolean }) => Number(b.isAvailable) - Number(a.isAvailable);
+  const stallItems = Object.values(items).filter((i) => i.stallId === stall.id);
+  const menu = stallItems.filter((i) => i.kind === 'food').sort(byAvail);
+  const drinks = stallItems.filter((i) => i.kind === 'drink').sort(byAvail);
   const showBar = cart.count > 0;
 
   return (
-    <div className={showBar ? 'pb-28' : ''}>
+    <div className={showBar ? 'pb-32' : 'pb-8'}>
       <div className="relative">
         <Img src={stall.imageUrl} alt={`${stall.name} stall`} label={stall.name} className="h-[210px] w-full sm:h-[280px] lg:h-[320px]" />
         <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black/30 to-transparent" />
@@ -77,6 +80,18 @@ export default function StallDetail() {
             <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
               {menu.map((i) => <FoodRow key={i.id} item={i} />)}
             </div>
+          )}
+
+          {drinks.length > 0 && (
+            <section aria-label={`${stall.name} drinks`}>
+              <div className="mb-3 mt-8 flex items-end justify-between">
+                <h2 className="h-section">Drinks</h2>
+                <span className="text-[13px] font-medium text-ink-muted">{drinks.length} Items</span>
+              </div>
+              <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+                {drinks.map((i) => <FoodRow key={i.id} item={i} />)}
+              </div>
+            </section>
           )}
         </div>
       </div>

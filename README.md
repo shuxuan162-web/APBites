@@ -33,11 +33,13 @@ The login screen has one-tap buttons for both accounts.
 4. Click **Accept**. Tab A's tracking screen updates instantly with an ETA. Then **Start Preparing**. Live Status workload and wait times update.
 5. Click **Mark as Ready**. The student gets a notification and pickup code (e.g. `A443`).
 6. Click **Confirm Collection** and enter the code. A wrong code is rejected. The order moves to **Completed** history on both sides.
+7. **With a drink:** in Tab A, open **Western Food** and add **Chicken Chop (RM 15.90)** and, from the *Drinks* section, **Sparkling Lemonade (RM 5.90)**. Check out (total **RM 21.80**). In Tab B, run Accept → Start Preparing → Mark as Ready → Confirm Collection. Both lines appear on the vendor card and the student's receipt.
 
 ## What's inside
 
 - **Student:** splash, onboarding, sign in/up (validation, strength meter), home (greeting, active order banner, live snapshot, featured, reorder, rule-based recommendations, budget and quick-meal finders), explore with filters, stall menu, food detail (instructions, quantity), search (filters, sort, highlight, recent), cart (one stall per order, replace-cart confirmation), checkout (ASAP or scheduled slots within hours, pay at counter or *simulated* online payment), confirmation, live tracking timeline, live cafeteria status, orders (active/completed/cancelled), receipts, favourites, notifications, profile, edit profile (photo), help (FAQ and stored support form), about, privacy/terms.
 - **Vendor:** dashboard KPIs, incoming orders with a state machine (accept, reject with reason, preparing, ready, collect with code verification), menu CRUD with availability toggles and image upload, live status controls (open/paused, prep stations, thresholds, manual workload report), 7-day analytics charts, settings.
+- **Beverages:** a **Drinks & Beverages** page (`/drinks`, reached from Home's *Thirsty? Grab a Drink* section, each stall's *Drinks* section, or the *Drinks* type filter in Search). It lists 24 drinks, 3 per stall, and no drink is sold at two stalls. This is enforced at build time (`scripts/check-drinks.mjs`) and in `api.ts` when vendors add or rename a drink. Drink prices are sample prices that vendors can edit.
 - **Data:** 8 stalls and the 80 menu items with names, descriptions and prices exactly as briefed. Photos are resolved from TheMealDB and Wikimedia Commons (`npm run images`). A graceful placeholder appears if an image fails to load.
 
 ## Wait-time and workload model

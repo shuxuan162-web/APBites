@@ -29,7 +29,7 @@ export function useStallLive(): Record<CategoryId, StallLive> & { list: StallLiv
   const items = useDb((s) => s.items);
   const now = useNow(15000);
   return useMemo(() => {
-    const itemList = Object.values(items);
+    const itemList = Object.values(items).filter((i) => i.kind === 'food'); // typical wait uses food prep times
     const map = {} as Record<CategoryId, StallLive>;
     for (const id of CATEGORY_ORDER) {
       const stall = stalls[id];

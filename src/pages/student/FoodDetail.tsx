@@ -21,6 +21,7 @@ export default function FoodDetail() {
   }
   const { stall, wait } = live[item.stallId];
   const canOrder = item.isAvailable && stall.isOpen;
+  const isDrink = item.kind === 'drink';
 
   return (
     <div className="pb-32">
@@ -44,18 +45,24 @@ export default function FoodDetail() {
           </div>
           <p className="mt-4 text-[14px] leading-[1.6] text-ink-muted">{item.description}</p>
 
-          <h2 className="mt-6 font-display text-[16px] font-semibold">What's Inside?</h2>
-          {item.ingredients?.length ? (
+          {/* Drinks without ingredients skip this block entirely. */}
+          {(!isDrink || !!item.ingredients?.length) && (
             <>
-              <div className="mt-2 flex flex-wrap gap-2">{item.ingredients.map((g) => <span key={g} className="rounded-full bg-brand-soft px-3 py-1.5 text-[13px] font-medium">{g}</span>)}</div>
-              <p className="mt-2 text-[12px] text-ink-muted">Ingredient list provided by the stall. Not verified for allergens — please ask the stall if you have an allergy.</p>
+              <h2 className="mt-6 font-display text-[16px] font-semibold">What's Inside?</h2>
+              {item.ingredients?.length ? (
+                <>
+                  <div className="mt-2 flex flex-wrap gap-2">{item.ingredients.map((g) => <span key={g} className="rounded-full bg-brand-soft px-3 py-1.5 text-[13px] font-medium">{g}</span>)}</div>
+                  <p className="mt-2 text-[12px] text-ink-muted">Ingredient list provided by the stall. Not verified for allergens — please ask the stall if you have an allergy.</p>
+                </>
+              ) : (
+                <p className="mt-1.5 flex items-start gap-1.5 text-[13px] text-ink-muted"><Info className="mt-0.5 h-4 w-4 shrink-0" />Detailed ingredients are pending vendor verification. Please ask the stall about allergens.</p>
+              )}
             </>
-          ) : (
-            <p className="mt-1.5 flex items-start gap-1.5 text-[13px] text-ink-muted"><Info className="mt-0.5 h-4 w-4 shrink-0" />Detailed ingredients are pending vendor verification. Please ask the stall about allergens.</p>
           )}
+          {isDrink && <p className="mt-3 text-[12px] text-ink-muted">Sample price — set by the stall and may change.</p>}
 
           <label htmlFor="notes" className="mt-6 block font-display text-[16px] font-semibold">Special Instructions (Optional)</label>
-          <textarea id="notes" rows={3} maxLength={200} value={notes} onChange={(e) => setNotes(e.target.value)} placeholder="E.g. Less spicy, no onions…"
+          <textarea id="notes" rows={3} maxLength={200} value={notes} onChange={(e) => setNotes(e.target.value)} placeholder={isDrink ? "E.g. Less sugar, less ice…" : "E.g. Less spicy, no onions…"}
             className="mt-2 w-full resize-none rounded-[12px] bg-surface-alt p-3.5 text-[14px] placeholder:text-ink-faint focus:bg-white focus:outline-none focus:ring-2 focus:ring-ink/70" />
           <div className="flex justify-between text-[12px] text-ink-muted"><span>Requests depend on stall availability and can't always be fulfilled.</span><span className="tabular-nums">{notes.length}/200</span></div>
 

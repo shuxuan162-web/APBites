@@ -62,6 +62,11 @@ async function resolve(id, candidates) {
     }
   }
   if (!first) console.warn(`  ✗ no image for ${id}`);
+  // Drinks never reuse another item's photo — fall back to the UI placeholder instead.
+  if (first && /-d\d\d$/.test(id)) {
+    console.warn(`  ✗ only a duplicate photo for drink ${id}; leaving it to the placeholder`);
+    return null;
+  }
   return first;
 }
 

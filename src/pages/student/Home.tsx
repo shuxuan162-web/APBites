@@ -29,12 +29,19 @@ export default function Home() {
   const lowCount = openLive.filter((l) => l.load.level === 'low').length;
   const snapshot = [...openLive].sort((a, b) => (a.wait ?? 0) - (b.wait ?? 0));
   const snapRows = [snapshot[0], snapshot[Math.floor(snapshot.length / 2)], snapshot[snapshot.length - 1]].filter((v, i, a) => v && a.indexOf(v) === i);
+  const drinkPicks = useMemo(
+    () => CATEGORY_ORDER.map((id) => {
+      const list = Object.values(items).filter((i) => i.kind === 'drink' && i.stallId === id).sort((a, b) => Number(b.isAvailable) - Number(a.isAvailable) || a.id.localeCompare(b.id));
+      return list[0];
+    }).filter(Boolean),
+    [items],
+  );
   const favCats = useDb((s) => s.favourites[user.id] ?? []);
   const recommended = useMemo(() => {
     // transparent rule-based picks: favourite stalls first, then shortest current wait, available only
     const favStalls = new Set(favCats.map((id) => items[id]?.stallId));
     return Object.values(items)
-      .filter((i) => i.isAvailable && stalls[i.stallId].isOpen && !favCats.includes(i.id))
+      .filter((i) => i.kind === 'food' && i.isAvailable && stalls[i.stallId].isOpen && !favCats.includes(i.id))
       .map((i) => ({ i, score: (favStalls.has(i.stallId) ? -20 : 0) + (live[i.stallId].wait ?? 99) + i.prep / 3 }))
       .sort((a, b) => a.score - b.score)
       .filter((x, _, arr) => arr.filter((y) => y.i.stallId === x.i.stallId).indexOf(x) < 2) // max 2 per stall
@@ -158,6 +165,16 @@ export default function Home() {
           </div>
         </section>
       </div>
+
+      {/* drinks — one per stall */}
+      <section className="mt-8">
+        <SectionHeader title="Thirsty? Grab a Drink" sub="A signature sip from every stall" action={<Link to="/drinks" className="text-[13px] font-semibold link-accent">See All</Link>} />
+        <div className="scroll-x -mx-5 px-5 sm:mx-0 sm:px-0">
+          {loading
+            ? [0, 1, 2].map((i) => <Skeleton key={i} className="h-[240px] w-[175px] shrink-0" />)
+            : drinkPicks.map((d) => <FoodCard key={d.id} item={d} />)}
+        </div>
+      </section>
 
       {/* order again / recommended */}
       {past.length > 0 ? (

@@ -382,10 +382,14 @@ export function Toaster() {
 // ── Modals ──────────────────────────────────────────────────
 export function Modal({ open, onClose, children, label, sheet = false }: { open: boolean; onClose: () => void; children: ReactNode; label: string; sheet?: boolean }) {
   const ref = useRef<HTMLDivElement>(null);
+  // Keep the latest onClose without re-running the open effect: callers pass inline functions,
+  // and re-running it on every render stole focus back to the first control while typing.
+  const onCloseRef = useRef(onClose);
+  onCloseRef.current = onClose;
   useEffect(() => {
     if (!open) return;
     const prev = document.activeElement as HTMLElement | null;
-    const k = (e: KeyboardEvent) => e.key === 'Escape' && onClose();
+    const k = (e: KeyboardEvent) => e.key === 'Escape' && onCloseRef.current();
     window.addEventListener('keydown', k);
     setTimeout(() => ref.current?.querySelector<HTMLElement>('button, input, textarea, select')?.focus(), 30);
     const o = document.body.style.overflow;
@@ -395,7 +399,7 @@ export function Modal({ open, onClose, children, label, sheet = false }: { open:
       document.body.style.overflow = o;
       prev?.focus?.();
     };
-  }, [open, onClose]);
+  }, [open]);
   if (!open) return null;
   return (
     <div className={cx('fixed inset-0 z-[90] flex bg-black/40 animate-[fadeIn_160ms_ease-out_both]', sheet ? 'items-end justify-center sm:items-center' : 'items-center justify-center p-5')} onClick={onClose}>
