@@ -25,13 +25,13 @@ export default function FoodDetail() {
 
   return (
     <div className="pb-32">
-      <div className="container-app lg:grid lg:grid-cols-2 lg:gap-12 lg:px-12 lg:pt-8">
+      <div className="container-app md:grid md:grid-cols-2 md:gap-8 md:px-8 md:pt-6 lg:gap-12 lg:px-12 lg:pt-8">
         <div className="relative">
-          <Img src={item.imageUrl} alt={item.name} label={item.name} sold={!item.isAvailable} className="aspect-[4/3] w-full sm:aspect-[16/10] lg:aspect-square" rounded="rounded-b-[28px] lg:rounded-[28px]" />
+          <Img src={item.imageUrl} alt={item.name} label={item.name} sold={!item.isAvailable} className="aspect-[4/3] w-full md:aspect-square" rounded="rounded-b-[28px] md:rounded-[28px]" />
           <div className="absolute left-4 top-4" style={{ marginTop: 'var(--safe-top)' }}><BackButton floating /></div>
           <div className="absolute right-4 top-4" style={{ marginTop: 'var(--safe-top)' }}><FavButton itemId={item.id} /></div>
         </div>
-        <div className="page-x pt-5 lg:px-0">
+        <div className="page-x pt-5 md:px-0 md:pt-0">
           <Link to={`/stall/${stall.id}`} className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-ink-muted hover:text-ink"><Store className="h-4 w-4" />{stall.name}</Link>
           <div className="mt-1 flex items-start justify-between gap-4">
             <h1 className="font-display text-[26px] font-bold leading-[1.2]">{item.name}</h1>

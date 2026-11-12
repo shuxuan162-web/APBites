@@ -1,16 +1,18 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Bell, ChevronRight, ClipboardList, Heart, HelpCircle, Info, LogOut, Pencil, Shield } from 'lucide-react';
+import { Bell, ChevronRight, ClipboardList, Download, Heart, HelpCircle, Info, LogOut, Pencil, Share, Shield } from 'lucide-react';
 import { useDb } from '../../store/db';
 import { useCurrentUser, useSession } from '../../store/session';
 import { ConfirmationModal, PageHeader } from '../../components/ui';
 import { Avatar } from '../../components/layout';
+import { usePwa } from '../../lib/pwa';
 
 export default function Profile() {
   const user = useCurrentUser()!;
   const nav = useNavigate();
   const signOut = useSession((s) => s.signOut);
   const [confirm, setConfirm] = useState(false);
+  const pwa = usePwa();
   const stats = useDb((s) => {
     const mine = s.orders.filter((o) => o.userId === user.id);
     return { orders: mine.length, favs: (s.favourites[user.id] ?? []).length, unread: s.notifications.filter((n) => n.userId === user.id && !n.isRead).length };
@@ -44,6 +46,21 @@ export default function Profile() {
           </div>
         </div>
       </section>
+
+      {!pwa.installed && (pwa.deferred || pwa.iosManual) && (
+        <section className="mt-5 flex items-center gap-3.5 rounded-card bg-ink p-4 text-white shadow-card">
+          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand text-ink"><Download className="h-5 w-5" /></span>
+          <div className="min-w-0 flex-1">
+            <p className="font-display text-[15px] font-semibold">Install the APBites app</p>
+            <p className="text-[12px] text-white/70">
+              {pwa.deferred ? 'Open it from your home screen or desktop, full-screen and offline-ready.' : <>Tap <Share className="inline h-3.5 w-3.5 align-[-2px]" /> Share, then “Add to Home Screen”.</>}
+            </p>
+          </div>
+          {pwa.deferred && (
+            <button onClick={() => pwa.install()} className="h-10 shrink-0 rounded-[10px] bg-brand px-4 font-display text-[13px] font-semibold text-ink transition active:scale-95">Install</button>
+          )}
+        </section>
+      )}
 
       {groups.map((g, gi) => (
         <ul key={gi} className="mt-5 overflow-hidden rounded-card bg-white shadow-card">

@@ -87,8 +87,8 @@ export default function MenuManagement() {
             {menu.map((i) => (
               <tr key={i.id} className="border-t border-line">
                 <td className="px-4 py-3"><div className="flex items-center gap-3"><Img src={i.imageUrl} alt="" label={i.name} sold={!i.isAvailable} className="h-12 w-12 shrink-0" rounded="rounded-[10px]" /><div className="min-w-0"><p className="flex items-center gap-2 font-display font-semibold">{i.name}{i.kind === 'drink' && <Badge tone="brand">Drink</Badge>}</p><p className="line-clamp-1 max-w-sm text-[12px] text-ink-muted">{i.description}</p></div></div></td>
-                <td className="px-4 py-3 font-display font-bold tabular-nums">{rm(i.price)}</td>
-                <td className="px-4 py-3 tabular-nums text-ink-muted">{i.prep} min</td>
+                <td className="whitespace-nowrap px-4 py-3 font-display font-bold tabular-nums">{rm(i.price)}</td>
+                <td className="whitespace-nowrap px-4 py-3 tabular-nums text-ink-muted">{i.prep} min</td>
                 <td className="px-4 py-3"><div className="flex items-center gap-2"><Toggle checked={i.isAvailable} onChange={(v) => toggle(i, v)} label={`${i.name} available`} /><span className="text-[12px] font-semibold">{i.isAvailable ? 'Available' : 'Sold Out'}</span></div></td>
                 <td className="px-4 py-3"><div className="flex justify-end gap-1">
                   <button aria-label={`Edit ${i.name}`} onClick={() => { setErr(''); edit(i); }} className="flex h-10 w-10 items-center justify-center rounded-full hover:bg-surface-alt"><Pencil className="h-4 w-4" /></button>

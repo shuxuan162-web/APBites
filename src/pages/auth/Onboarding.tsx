@@ -1,7 +1,7 @@
 import { useRef, useState, type ReactNode } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Activity, Bell, CheckCircle2, Clock, ShoppingBag, Users, UtensilsCrossed } from 'lucide-react';
-import { Button, cx } from '../../components/ui';
+import { Button, Logo, cx } from '../../components/ui';
 import { setOnboarded } from '../../store/session';
 import { useDb } from '../../store/db';
 
@@ -107,8 +107,19 @@ export default function Onboarding() {
   const s = SLIDES[i];
 
   return (
+    <div className="flex min-h-[100dvh] bg-white">
+      {/* Desktop brand panel (matches the sign-in page) */}
+      <div className="relative hidden flex-1 flex-col justify-between overflow-hidden bg-brand p-12 lg:flex">
+        <div className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-white/20" />
+        <Logo />
+        <div className="relative max-w-md">
+          <h2 className="font-display text-[40px] font-extrabold leading-[1.1] tracking-[-0.02em]">Your Campus. Your Cravings. Your Way.</h2>
+          <p className="mt-4 text-[16px]">Skip the queue, grab your food, and enjoy campus life.</p>
+        </div>
+        <p className="text-[13px] opacity-70">Made for APU Campus Life</p>
+      </div>
     <div
-      className="mx-auto flex min-h-[100dvh] max-w-md flex-col bg-white px-5 pb-8"
+      className="mx-auto flex min-h-[100dvh] w-full max-w-md flex-col bg-white px-5 pb-8 lg:mx-0 lg:flex-1 lg:max-w-none lg:items-center lg:justify-center"
       style={{ paddingBottom: 'calc(32px + var(--safe-bottom))' }}
       onTouchStart={(e) => (touch.current = e.touches[0].clientX)}
       onTouchEnd={(e) => {
@@ -119,6 +130,7 @@ export default function Onboarding() {
         touch.current = null;
       }}
     >
+      <div className="flex w-full max-w-md flex-1 flex-col lg:max-h-[860px]">
       <div className="flex h-14 items-center justify-end">
         {i < 2 && <button onClick={finish} className="h-11 px-3 font-display text-[14px] font-semibold text-ink-muted hover:text-ink">Skip</button>}
       </div>
@@ -136,6 +148,8 @@ export default function Onboarding() {
         </div>
         <Button full onClick={next}>{i < 2 ? 'Next' : 'Get Started'}</Button>
       </div>
+      </div>
+    </div>
     </div>
   );
 }
