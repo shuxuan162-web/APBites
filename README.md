@@ -4,6 +4,15 @@
 
 React 18, TypeScript, Vite, Tailwind CSS, React Router, Zustand, Lucide and Recharts.
 
+## Try it live
+
+**👉 [apbites.shuzers.my](https://apbites.shuzers.my/)**
+
+- Open it on a phone or computer. The layout adapts: bottom tabs on phones, top navigation on desktop, and a sidebar for vendors.
+- **Install it as an app.** On Android or desktop Chrome/Edge, use the browser's *Install* option or the *Install the APBites app* card on the Profile page. On iPhone, tap *Share → Add to Home Screen*. The installed app opens full-screen and works offline for pages you've already visited.
+- Sign in with the one-tap demo accounts on the login screen (see [Demo mode](#demo-mode-no-backend-needed)). To watch orders update live, open the student account in one tab and a vendor account in another.
+- Hosted on Vercel and deployed automatically from `main`.
+
 ## Run it
 
 ```bash
@@ -27,7 +36,7 @@ The login screen has one-tap buttons for both accounts.
 
 ## The judge demo script (≈3 minutes)
 
-1. **Tab A:** *Continue as demo student*. Open **Live Status**. Western Food (low workload) has a shorter estimated wait than Korean Food (moderate).
+1. **Tab A:** open [apbites.shuzers.my](https://apbites.shuzers.my/) (or your local dev server) and choose *Continue as demo student*. Open **Live Status**. Western Food (low workload) has a shorter estimated wait than Korean Food (moderate).
 2. Open **Western Food**, then **Chicken Chop (RM 15.90)**, then **Add to Cart**, then **Checkout**. Choose Self Pickup, ASAP and Pay at Counter, then **Place Order**. It shows *Pending Acceptance*.
 3. **Tab B (second tab):** choose *Western Food* in the vendor dropdown and sign in. The order appears under **Incoming Orders → New**.
 4. Click **Accept**. Tab A's tracking screen updates instantly with an ETA. Then **Start Preparing**. Live Status workload and wait times update.
