@@ -13,7 +13,7 @@ import { orderPrepMinutes } from '../lib/waitTime';
 import { round2, uid } from '../lib/format';
 
 export const DB_KEY = 'apbites-db-v1';
-export const DB_VERSION = 5;
+export const DB_VERSION = 6;
 
 const IMG = images as Record<string, { url: string; credit: string }>;
 export const imageFor = (id: string) => IMG[id]?.url;

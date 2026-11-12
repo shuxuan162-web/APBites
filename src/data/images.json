@@ -1,35 +1,35 @@
 {
   "stall:western": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Food_court_edo_japan_la_belle_province_basha.jpg/500px-Food_court_edo_japan_la_belle_province_basha.jpg",
-    "credit": "Wikimedia Commons"
+    "url": "/images/stalls/western.webp",
+    "credit": "Supplied by the APBites team"
   },
   "stall:korean": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Korea-Pojangmacha-01.jpg/500px-Korea-Pojangmacha-01.jpg",
-    "credit": "Wikimedia Commons"
+    "url": "/images/stalls/korean.webp",
+    "credit": "Supplied by the APBites team"
   },
   "stall:chinese": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Lau_Pa_Sat_Singapore_1.jpg/500px-Lau_Pa_Sat_Singapore_1.jpg",
-    "credit": "Wikimedia Commons"
+    "url": "/images/stalls/chinese.webp",
+    "credit": "Supplied by the APBites team"
   },
   "stall:japanese": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Izakaya_Exterior_Gotanda.jpg/500px-Izakaya_Exterior_Gotanda.jpg",
-    "credit": "Wikimedia Commons"
+    "url": "/images/stalls/japanese.webp",
+    "credit": "Supplied by the APBites team"
   },
   "stall:shawarma": {
     "url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/D%C3%B6ner_kebab_slicing.jpg",
     "credit": "Wikimedia Commons"
   },
   "stall:mamak": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Restaurant_Ahmediah_-_panoramio.jpg/500px-Restaurant_Ahmediah_-_panoramio.jpg",
-    "credit": "Wikimedia Commons"
+    "url": "/images/stalls/mamak.webp",
+    "credit": "Supplied by the APBites team"
   },
   "stall:kopitiam": {
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/CoffeeShopSG.JPG/500px-CoffeeShopSG.JPG",
     "credit": "Wikimedia Commons"
   },
   "stall:indian": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Banana-leaf-1.JPG/500px-Banana-leaf-1.JPG",
-    "credit": "Wikimedia Commons"
+    "url": "/images/stalls/indian.webp",
+    "credit": "Supplied by the APBites team"
   },
   "wes-01": {
     "url": "https://www.themealdb.com/images/media/meals/sutysw1468247559.jpg",
@@ -48,12 +48,12 @@
     "credit": "Wikimedia Commons"
   },
   "wes-06": {
-    "url": "https://www.themealdb.com/images/media/meals/lgmnff1763789847.jpg",
-    "credit": "TheMealDB"
+    "url": "/images/menu/wes-06.webp",
+    "credit": "Supplied by the APBites team"
   },
   "wes-07": {
-    "url": "https://www.themealdb.com/images/media/meals/syqypv1486981727.jpg",
-    "credit": "TheMealDB"
+    "url": "/images/menu/wes-07.webp",
+    "credit": "Supplied by the APBites team"
   },
   "wes-08": {
     "url": "https://www.themealdb.com/images/media/meals/wtsvxx1511296896.jpg",
@@ -72,44 +72,44 @@
     "credit": "TheMealDB"
   },
   "chi-03": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Koh_Mak%2C_Thailand%2C_Fried_rice_with_seafood%2C_Thai_fried_rice.jpg/500px-Koh_Mak%2C_Thailand%2C_Fried_rice_with_seafood%2C_Thai_fried_rice.jpg",
-    "credit": "Wikimedia Commons"
+    "url": "/images/menu/chi-03.webp",
+    "credit": "Supplied by the APBites team"
   },
   "chi-04": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Charsiu.jpg/500px-Charsiu.jpg",
-    "credit": "Wikimedia Commons"
+    "url": "/images/menu/chi-04.webp",
+    "credit": "Supplied by the APBites team"
   },
   "chi-06": {
-    "url": "https://www.themealdb.com/images/media/meals/1525876468.jpg",
-    "credit": "TheMealDB"
+    "url": "/images/menu/chi-06.webp",
+    "credit": "Supplied by the APBites team"
   },
   "chi-08": {
     "url": "https://www.themealdb.com/images/media/meals/1529444113.jpg",
     "credit": "TheMealDB"
   },
   "jap-01": {
-    "url": "https://www.themealdb.com/images/media/meals/vwrpps1503068729.jpg",
-    "credit": "TheMealDB"
+    "url": "/images/menu/jap-01.webp",
+    "credit": "Supplied by the APBites team"
   },
   "jap-02": {
-    "url": "https://www.themealdb.com/images/media/meals/wvpsxx1468256321.jpg",
-    "credit": "TheMealDB"
+    "url": "/images/menu/jap-02.webp",
+    "credit": "Supplied by the APBites team"
   },
   "jap-04": {
-    "url": "https://www.themealdb.com/images/media/meals/g046bb1663960946.jpg",
-    "credit": "TheMealDB"
+    "url": "/images/menu/jap-04.webp",
+    "credit": "Supplied by the APBites team"
   },
   "jap-05": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Shoyu_Ramen%EF%BC%88Tokyo_Ramen%EF%BC%89_-_01.jpg/500px-Shoyu_Ramen%EF%BC%88Tokyo_Ramen%EF%BC%89_-_01.jpg",
-    "credit": "Wikimedia Commons"
+    "url": "/images/menu/jap-05.webp",
+    "credit": "Supplied by the APBites team"
   },
   "sha-04": {
     "url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/D%C3%B6ner_kebab_slicing.jpg",
     "credit": "Wikimedia Commons"
   },
   "sha-08": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Sabich1.png/500px-Sabich1.png",
-    "credit": "Wikimedia Commons"
+    "url": "/images/menu/sha-08.webp",
+    "credit": "Supplied by the APBites team"
   },
   "sha-10": {
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/French_Fries.JPG/500px-French_Fries.JPG",
@@ -124,8 +124,8 @@
     "credit": "TheMealDB"
   },
   "kop-02": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Soft-boiled-egg.jpg/500px-Soft-boiled-egg.jpg",
-    "credit": "Wikimedia Commons"
+    "url": "/images/menu/kop-02.webp",
+    "credit": "Supplied by the APBites team"
   },
   "kop-03": {
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Hainanese_Chicken_Rice.jpg/500px-Hainanese_Chicken_Rice.jpg",
@@ -140,28 +140,28 @@
     "credit": "Wikimedia Commons"
   },
   "kop-06": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Newton_HokkienMee.JPG/500px-Newton_HokkienMee.JPG",
-    "credit": "Wikimedia Commons"
+    "url": "/images/menu/kop-06.webp",
+    "credit": "Supplied by the APBites team"
   },
   "kop-07": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/A_Steam_White_Rice_Noodle_Rolls_from_KC_Chinese_Restaurant.jpg/500px-A_Steam_White_Rice_Noodle_Rolls_from_KC_Chinese_Restaurant.jpg",
-    "credit": "Wikimedia Commons"
+    "url": "/images/menu/kop-07.webp",
+    "credit": "Supplied by the APBites team"
   },
   "kop-08": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/FrenchToast.JPG/500px-FrenchToast.JPG",
-    "credit": "Wikimedia Commons"
+    "url": "/images/menu/kop-08.webp",
+    "credit": "Supplied by the APBites team"
   },
   "kop-09": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Mee_siam.jpg/500px-Mee_siam.jpg",
-    "credit": "Wikimedia Commons"
+    "url": "/images/menu/kop-09.webp",
+    "credit": "Supplied by the APBites team"
   },
   "ind-01": {
     "url": "https://www.themealdb.com/images/media/meals/xrttsx1487339558.jpg",
     "credit": "TheMealDB"
   },
   "ind-02": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Banana-leaf-1.JPG/500px-Banana-leaf-1.JPG",
-    "credit": "Wikimedia Commons"
+    "url": "/images/menu/ind-02.webp",
+    "credit": "Supplied by the APBites team"
   },
   "ind-05": {
     "url": "https://www.themealdb.com/images/media/meals/qptpvt1487339892.jpg",
@@ -192,8 +192,8 @@
     "credit": "Wikimedia Commons"
   },
   "kor-01": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Iksan_City_48_Korean_Style_Fried_chicken.jpg/500px-Iksan_City_48_Korean_Style_Fried_chicken.jpg",
-    "credit": "Wikimedia Commons"
+    "url": "/images/menu/kor-01.webp",
+    "credit": "Supplied by the APBites team"
   },
   "kor-02": {
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Dolsot-bibimbap.jpg/500px-Dolsot-bibimbap.jpg",
@@ -236,8 +236,8 @@
     "credit": "Wikimedia Commons"
   },
   "chi-10": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Claypot_Chicken_Rice%2C_Singapore.JPG/500px-Claypot_Chicken_Rice%2C_Singapore.JPG",
-    "credit": "Wikimedia Commons"
+    "url": "/images/menu/chi-10.webp",
+    "credit": "Supplied by the APBites team"
   },
   "jap-03": {
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Beef_curry_rice_003.jpg/500px-Beef_curry_rice_003.jpg",
@@ -252,8 +252,8 @@
     "credit": "Wikimedia Commons"
   },
   "jap-08": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/%E5%8F%B0%E7%81%A3%E5%8D%97%E6%8A%95%E8%8D%89%E5%B1%AF%E6%B0%B4%E9%A4%83Nantou%2C_Taiwan_Caotun_dumplings.jpg/500px-%E5%8F%B0%E7%81%A3%E5%8D%97%E6%8A%95%E8%8D%89%E5%B1%AF%E6%B0%B4%E9%A4%83Nantou%2C_Taiwan_Caotun_dumplings.jpg",
-    "credit": "Wikimedia Commons"
+    "url": "/images/menu/jap-08.webp",
+    "credit": "Supplied by the APBites team"
   },
   "jap-09": {
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Yakisoba_-_01.jpg/500px-Yakisoba_-_01.jpg",
@@ -276,16 +276,16 @@
     "credit": "Wikimedia Commons"
   },
   "sha-07": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Falafels_2.jpg/500px-Falafels_2.jpg",
-    "credit": "Wikimedia Commons"
+    "url": "/images/menu/sha-07.webp",
+    "credit": "Supplied by the APBites team"
   },
   "sha-09": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Lebanese_style_hummus.jpg/500px-Lebanese_style_hummus.jpg",
-    "credit": "Wikimedia Commons"
+    "url": "/images/menu/sha-09.webp",
+    "credit": "Supplied by the APBites team"
   },
   "mam-02": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Murtabak.jpg/500px-Murtabak.jpg",
-    "credit": "Wikimedia Commons"
+    "url": "/images/menu/mam-02.webp",
+    "credit": "Supplied by the APBites team"
   },
   "mam-05": {
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Kampung_Bukit_Jagong%2C_Pendang_20240917_172701.jpg/500px-Kampung_Bukit_Jagong%2C_Pendang_20240917_172701.jpg",
@@ -296,8 +296,8 @@
     "credit": "Wikimedia Commons"
   },
   "mam-07": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/A_plate_of_Nasi_Kandar.jpg/500px-A_plate_of_Nasi_Kandar.jpg",
-    "credit": "Wikimedia Commons"
+    "url": "/images/menu/mam-07.webp",
+    "credit": "Supplied by the APBites team"
   },
   "mam-08": {
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/YosriRotiCanai.jpg/500px-YosriRotiCanai.jpg",
@@ -328,20 +328,20 @@
     "credit": "Wikimedia Commons"
   },
   "sha-03": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Jiroufan.jpg/500px-Jiroufan.jpg",
-    "credit": "Wikimedia Commons"
+    "url": "/images/menu/sha-03.webp",
+    "credit": "Supplied by the APBites team"
   },
   "sha-05": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Empanada_flor_de_Calabaza.jpg/500px-Empanada_flor_de_Calabaza.jpg",
-    "credit": "Wikimedia Commons"
+    "url": "/images/menu/sha-05.webp",
+    "credit": "Supplied by the APBites team"
   },
   "mam-03": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Indomie_Logo.png/500px-Indomie_Logo.png",
-    "credit": "Wikimedia Commons"
+    "url": "/images/menu/mam-03.webp",
+    "credit": "Supplied by the APBites team"
   },
   "mam-09": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Mie_Aceh_with_beef.jpg/500px-Mie_Aceh_with_beef.jpg",
-    "credit": "Wikimedia Commons"
+    "url": "/images/menu/mam-09.webp",
+    "credit": "Supplied by the APBites team"
   },
   "kop-10": {
     "url": "https://www.themealdb.com/images/media/meals/wyxwsp1486979827.jpg",
@@ -352,16 +352,16 @@
     "credit": "Wikimedia Commons"
   },
   "wes-d01": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Strawberry_milk_shake_%28cropped%29.jpg/500px-Strawberry_milk_shake_%28cropped%29.jpg",
-    "credit": "Wikimedia Commons"
+    "url": "/images/menu/wes-d01.webp",
+    "credit": "Supplied by the APBites team"
   },
   "wes-d02": {
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Lemonade_-_27682817724.jpg/500px-Lemonade_-_27682817724.jpg",
     "credit": "Wikimedia Commons"
   },
   "wes-d03": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Espresso_Americano.jpeg/500px-Espresso_Americano.jpeg",
-    "credit": "Wikimedia Commons"
+    "url": "/images/menu/wes-d03.webp",
+    "credit": "Supplied by the APBites team"
   },
   "kor-d02": {
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Yujacha.jpg/500px-Yujacha.jpg",
@@ -388,32 +388,32 @@
     "credit": "Wikimedia Commons"
   },
   "jap-d02": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Houjicha.jpg/500px-Houjicha.jpg",
-    "credit": "Wikimedia Commons"
+    "url": "/images/menu/jap-d02.webp",
+    "credit": "Supplied by the APBites team"
   },
   "sha-d01": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Lemon_%26_Mint.jpg/500px-Lemon_%26_Mint.jpg",
-    "credit": "Wikimedia Commons"
+    "url": "/images/menu/sha-d01.webp",
+    "credit": "Supplied by the APBites team"
   },
   "sha-d02": {
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Fresh_ayran.jpg/500px-Fresh_ayran.jpg",
     "credit": "Wikimedia Commons"
   },
   "sha-d03": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Hibiscus_tea.jpg/500px-Hibiscus_tea.jpg",
-    "credit": "Wikimedia Commons"
+    "url": "/images/menu/sha-d03.webp",
+    "credit": "Supplied by the APBites team"
   },
   "mam-d01": {
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Teh_Tarik_at_the_Iskandar_Curry_House_at_One_Riverside_%28DSCF0286%29.jpg/500px-Teh_Tarik_at_the_Iskandar_Curry_House_at_One_Riverside_%28DSCF0286%29.jpg",
     "credit": "Wikimedia Commons"
   },
   "mam-d02": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Cup_of_Milo_Dinosaur_June_29%2C_2013.jpg/500px-Cup_of_Milo_Dinosaur_June_29%2C_2013.jpg",
-    "credit": "Wikimedia Commons"
+    "url": "/images/menu/mam-d02.webp",
+    "credit": "Supplied by the APBites team"
   },
   "kop-d01": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Javanese_Kopi_Tubruk.jpg/500px-Javanese_Kopi_Tubruk.jpg",
-    "credit": "Wikimedia Commons"
+    "url": "/images/menu/kop-d01.webp",
+    "credit": "Supplied by the APBites team"
   },
   "ind-d01": {
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Salt_lassi.jpg/500px-Salt_lassi.jpg",
@@ -428,19 +428,23 @@
     "credit": "Wikimedia Commons"
   },
   "jap-d03": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Genmaicha.JPG/500px-Genmaicha.JPG",
-    "credit": "Wikimedia Commons"
+    "url": "/images/menu/jap-d03.webp",
+    "credit": "Supplied by the APBites team"
   },
   "mam-d03": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Limeade.jpg/500px-Limeade.jpg",
-    "credit": "Wikimedia Commons"
+    "url": "/images/menu/mam-d03.webp",
+    "credit": "Supplied by the APBites team"
   },
   "kop-d02": {
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Hong_Kong_Milk_Tea%2C_Cha_Chaan_Teng-style_with_Black_and_White_cup.jpg/500px-Hong_Kong_Milk_Tea%2C_Cha_Chaan_Teng-style_with_Black_and_White_cup.jpg",
-    "credit": "Wikimedia Commons"
+    "url": "/images/menu/kop-d02.webp",
+    "credit": "Supplied by the APBites team"
   },
   "kop-d03": {
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Yuanyang_%28drink%29.jpg/500px-Yuanyang_%28drink%29.jpg",
     "credit": "Wikimedia Commons"
+  },
+  "ind-d03": {
+    "url": "/images/menu/ind-d03.webp",
+    "credit": "Supplied by the APBites team"
   }
 }
