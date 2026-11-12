@@ -34,15 +34,6 @@ The login screen has one-tap buttons for both accounts.
 
 **Demo controls** (developer only, hidden from students): open them from Vendor → Settings → *Open demo controls*, or tap the version label five times on About. From there you can generate simulated orders, turn on auto-traffic, or reset all data. Simulated orders are always flagged and shown as "demo data".
 
-## The judge demo script (≈3 minutes)
-
-1. **Tab A:** open [apbites.shuzers.my](https://apbites.shuzers.my/) (or your local dev server) and choose *Continue as demo student*. Open **Live Status**. Western Food (low workload) has a shorter estimated wait than Korean Food (moderate).
-2. Open **Western Food**, then **Chicken Chop (RM 15.90)**, then **Add to Cart**, then **Checkout**. Choose Self Pickup, ASAP and Pay at Counter, then **Place Order**. It shows *Pending Acceptance*.
-3. **Tab B (second tab):** choose *Western Food* in the vendor dropdown and sign in. The order appears under **Incoming Orders → New**.
-4. Click **Accept**. Tab A's tracking screen updates instantly with an ETA. Then **Start Preparing**. Live Status workload and wait times update.
-5. Click **Mark as Ready**. The student gets a notification and pickup code (e.g. `A443`).
-6. Click **Confirm Collection** and enter the code. A wrong code is rejected. The order moves to **Completed** history on both sides.
-7. **With a drink:** in Tab A, open **Western Food** and add **Chicken Chop (RM 15.90)** and, from the *Drinks* section, **Sparkling Lemonade (RM 5.90)**. Check out (total **RM 21.80**). In Tab B, run Accept → Start Preparing → Mark as Ready → Confirm Collection. Both lines appear on the vendor card and the student's receipt.
 
 ## What's inside
 
